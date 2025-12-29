@@ -1,5 +1,13 @@
 [
   {
+    "remarks": "Proxy DNS IPs",
+    "outboundTag": "proxy",
+    "ip": [
+      "1.1.1.1",
+      "8.8.8.8"
+    ]
+  },
+  {
     "remarks": "阻断udp443",
     "outboundTag": "block",
     "port": "443",

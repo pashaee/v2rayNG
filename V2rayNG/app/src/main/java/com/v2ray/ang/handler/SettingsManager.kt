@@ -29,6 +29,21 @@ import java.util.Locale
 object SettingsManager {
 
     /**
+     * Initialize default settings for fresh installs without overriding existing values.
+     */
+    fun initDefaultSettings() {
+        setDefaultSetting(AppConfig.PREF_VPN_DNS, AppConfig.DNS_VPN)
+        setDefaultSetting(AppConfig.PREF_REMOTE_DNS, AppConfig.DNS_PROXY)
+        setDefaultSetting(AppConfig.PREF_DOMESTIC_DNS, AppConfig.DNS_DIRECT)
+    }
+
+    private fun setDefaultSetting(key: String, value: String) {
+        if (!MmkvManager.hasSettingsKey(key)) {
+            MmkvManager.encodeSettings(key, value)
+        }
+    }
+
+    /**
      * Initialize routing rulesets.
      * @param context The application context.
      */
