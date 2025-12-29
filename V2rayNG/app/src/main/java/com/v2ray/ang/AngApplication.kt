@@ -34,6 +34,7 @@ class AngApplication : MultiDexApplication() {
 
         MMKV.initialize(this)
 
+        SettingsManager.initDefaultSettings()
         SettingsManager.setNightMode()
         // Initialize WorkManager with the custom configuration
         WorkManager.initialize(this, workManagerConfiguration)

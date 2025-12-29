@@ -1,5 +1,13 @@
 [
   {
+    "remarks": "Proxy DNS IPs",
+    "outboundTag": "proxy",
+    "ip": [
+      "1.1.1.1",
+      "8.8.8.8"
+    ]
+  },
+  {
     "remarks": "绕过bittorrent",
     "outboundTag": "direct",
     "protocol": [
